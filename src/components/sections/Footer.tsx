@@ -3,6 +3,7 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { navItems, site } from "@/content/config";
 import { Magnetic } from "@/components/ui/Magnetic";
 import { useJourney } from "@/lib/store";
@@ -130,6 +131,8 @@ export function Footer() {
   const [wp, setWp] = useState(0);
   const reduce = useReducedMotion();
   const { goTo } = useJourney();
+  const pathname = usePathname();
+  const onHome = pathname === "/";
   const frame = useRef(0);
 
   useEffect(() => {
@@ -184,10 +187,12 @@ export function Footer() {
                 <li key={n.href}>
                   <Magnetic>
                     <motion.a
-                      href={n.href}
+                      href={onHome ? n.href : `/${n.href}`}
                       onClick={(e) => {
-                        e.preventDefault();
-                        goTo(n.href);
+                        if (onHome) {
+                          e.preventDefault();
+                          goTo(n.href);
+                        }
                       }}
                       className="group inline-flex items-center gap-2 rounded-full border border-paper/20 bg-ink px-5 py-3 font-mono text-sm uppercase tracking-[0.12em] transition-colors hover:border-lime hover:bg-lime hover:text-ink"
                       animate={reduce ? undefined : { y: [0, -5, 0] }}

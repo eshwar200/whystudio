@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/sections/Footer";
 
 export const metadata: Metadata = { title: "Terms of service" };
 
 export default function TermsPage() {
   return (
-    <main className="min-h-screen bg-paper px-6 py-24 text-ink md:px-12">
-      <article className="mx-auto max-w-3xl">
+    <div className="bg-paper text-ink">
+      <Header />
+      <main id="main" className="min-h-screen px-6 pb-24 pt-32 md:px-12">
+        <article className="mx-auto max-w-3xl">
         <p className="kicker text-volt">WHY Venture Studio</p>
         <h1 className="display mt-6 text-6xl md:text-8xl">Terms of service</h1>
         <p className="mt-6 text-sm text-ink/70">Last updated: 9 October 2026</p>
@@ -19,7 +23,9 @@ export default function TermsPage() {
           <h2>Contact</h2>
           <p>Questions about these terms can be sent to 7780754541. Have qualified counsel adapt these terms before accepting applications or processing sensitive information at scale.</p>
         </div>
-      </article>
-    </main>
+        </article>
+      </main>
+      <Footer />
+    </div>
   );
 }

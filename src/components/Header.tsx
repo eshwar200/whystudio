@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { navItems } from "@/content/config";
 import { cn } from "@/lib/cn";
 import { useJourney } from "@/lib/store";
@@ -12,6 +13,8 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const { goTo } = useJourney();
+  const pathname = usePathname();
+  const onHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -41,7 +44,12 @@ export function Header() {
       )}
     >
       <div className="frame flex h-16 items-center justify-between gap-6">
-        <a href="#top" onClick={(e) => (e.preventDefault(), nav("#top"))} className="group flex items-baseline gap-2" aria-label="WHY Venture Studio, back to top">
+        <a href={onHome ? "#top" : "/"} onClick={(e) => {
+          if (onHome) {
+            e.preventDefault();
+            nav("#top");
+          }
+        }} className="group flex items-baseline gap-2" aria-label="WHY Venture Studio, back to top">
           <Image src="/why-logo.png" alt="WHY Venture Studio" width={92} height={66} className="h-9 w-24 object-contain object-left" priority />
           <span className="kicker hidden whitespace-nowrap text-ink/75 transition-opacity group-hover:text-ink sm:inline lg:hidden min-[1400px]:inline">Venture Studio</span>
         </a>
@@ -51,8 +59,13 @@ export function Header() {
             {navItems.map((item, i) => (
               <li key={item.href}>
                 <a
-                  href={item.href}
-                  onClick={(e) => (e.preventDefault(), nav(item.href))}
+                  href={onHome ? item.href : `/${item.href}`}
+                  onClick={(e) => {
+                    if (onHome) {
+                      e.preventDefault();
+                      nav(item.href);
+                    }
+                  }}
                   className="kicker group relative flex items-center gap-1.5 whitespace-nowrap rounded-full px-2.5 py-2 transition-colors hover:bg-ink hover:text-paper min-[1400px]:px-3"
                 >
                   <span className="hidden opacity-40 group-hover:opacity-60 min-[1400px]:inline">{String(i + 1).padStart(2, "0")}</span>
@@ -64,10 +77,15 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a href="/partner" className="btn-lime hidden whitespace-nowrap !py-2.5 lg:inline-flex">
+          <a href="/partner" className="btn hidden whitespace-nowrap !bg-volt !text-paper !py-2.5 sm:inline-flex">
             Partner with us <ArrowUpRight size={14} aria-hidden />
           </a>
-          <a href="#apply" onClick={(e) => (e.preventDefault(), nav("#apply"))} className="btn-lime hidden whitespace-nowrap !py-2.5 sm:inline-flex">
+          <a href={onHome ? "#apply" : "/#apply"} onClick={(e) => {
+            if (onHome) {
+              e.preventDefault();
+              nav("#apply");
+            }
+          }} className="btn-lime hidden whitespace-nowrap !py-2.5 sm:inline-flex">
             Start a conversation <ArrowUpRight size={14} aria-hidden />
           </a>
           <button
@@ -98,7 +116,12 @@ export function Header() {
               <ul className="space-y-1">
                 {navItems.map((item, i) => (
                   <motion.li key={item.href} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 + i * 0.04 }}>
-                    <a href={item.href} onClick={(e) => (e.preventDefault(), nav(item.href))} className="display-narrow flex items-baseline gap-3 text-[13vw] leading-[0.95] sm:text-7xl">
+                    <a href={onHome ? item.href : `/${item.href}`} onClick={(e) => {
+                      if (onHome) {
+                        e.preventDefault();
+                        nav(item.href);
+                      }
+                    }} className="display-narrow flex items-baseline gap-3 text-[13vw] leading-[0.95] sm:text-7xl">
                       <span className="kicker text-lime">{String(i + 1).padStart(2, "0")}</span>
                       {item.label}
                     </a>
@@ -106,11 +129,14 @@ export function Header() {
                 ))}
               </ul>
             </nav>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <a href="/partner" onClick={() => setOpen(false)} className="btn-lime w-full">
-                Partner with us <ArrowUpRight size={14} aria-hidden />
-              </a>
-              <a href="#apply" onClick={(e) => (e.preventDefault(), nav("#apply"))} className="btn-ghost w-full">
+            <div className="grid gap-3">
+              <a href="/partner" className="btn w-full !bg-volt !text-paper">Partner with us <ArrowUpRight size={14} aria-hidden /></a>
+              <a href={onHome ? "#apply" : "/#apply"} onClick={(e) => {
+                if (onHome) {
+                  e.preventDefault();
+                  nav("#apply");
+                }
+              }} className="btn-lime w-full">
                 Start a conversation <ArrowUpRight size={14} aria-hidden />
               </a>
             </div>

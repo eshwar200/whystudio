@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/sections/Footer";
 
 export const metadata: Metadata = { title: "Privacy policy" };
 
 export default function PrivacyPage() {
   return (
-    <main className="min-h-screen bg-paper px-6 py-24 text-ink md:px-12">
-      <article className="mx-auto max-w-3xl">
+    <div className="bg-paper text-ink">
+      <Header />
+      <main id="main" className="min-h-screen px-6 pb-24 pt-32 md:px-12">
+        <article className="mx-auto max-w-3xl">
         <p className="kicker text-volt">WHY Venture Studio</p>
         <h1 className="display mt-6 text-6xl md:text-8xl">Privacy policy</h1>
         <p className="mt-6 text-sm text-ink/70">Last updated: 9 October 2026</p>
@@ -18,7 +22,9 @@ export default function PrivacyPage() {
           <h2>Your choices</h2>
           <p>To request access, correction or deletion of your information, contact us at 7780754541. This policy is a plain-language starting point and should be reviewed with qualified counsel for your specific operations.</p>
         </div>
-      </article>
-    </main>
+        </article>
+      </main>
+      <Footer />
+    </div>
   );
 }
