@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { capabilities } from "@/content/capabilities";
-import { ecosystemMetrics, ecosystemMission, ecosystemPhoto, gallery, people } from "@/content/ecosystem";
+import { ecosystemMetrics, ecosystemMission, ecosystemPhotos, ecosystemPhoto, people } from "@/content/ecosystem";
 import type { Metric } from "@/content/types";
 import { Odometer } from "@/components/ui/Odometer";
 import { Reveal, RevealLines } from "@/components/ui/Reveal";
@@ -31,7 +31,7 @@ export function EcosystemProof() {
   const metrics = visible(ecosystemMetrics);
   const faces = visible(people).slice(0, 5);
   const { goTo } = useJourney();
-  const photos = [ecosystemPhoto, ...gallery].filter((photo, index, all) => all.findIndex((item) => item.src === photo.src) === index);
+  const photos = ecosystemPhotos;
   const [photoIndex, setPhotoIndex] = useState(0);
   const activePhoto = photos[photoIndex] ?? ecosystemPhoto;
 
@@ -80,22 +80,6 @@ export function EcosystemProof() {
           ) : (
             <Slot label="Founder session" file="content/ecosystem.ts → ecosystemPhoto" className="absolute inset-0 rounded-[1.25rem]" />
           )}
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/80 to-transparent p-5 pt-20 text-paper">
-            <p className="kicker">{activePhoto.category}</p>
-            <p className="mt-2 text-lg">{activePhoto.caption}</p>
-            <div className="mt-4 flex gap-2" aria-label="Ecosystem images">
-              {photos.map((photo, index) => (
-                <button
-                  key={photo.src}
-                  type="button"
-                  onClick={() => setPhotoIndex(index)}
-                  aria-label={`Show ecosystem image ${index + 1}`}
-                  aria-current={index === photoIndex}
-                  className={`h-1.5 rounded-full transition-all ${index === photoIndex ? "w-8 bg-volt" : "w-4 bg-paper/70"}`}
-                />
-              ))}
-            </div>
-          </div>
         </Reveal>
 
         <Reveal className="relative flex min-h-[14rem] flex-col justify-between overflow-hidden rounded-[1.25rem] bg-ink p-6 text-paper lg:col-span-4">
