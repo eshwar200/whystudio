@@ -1,0 +1,11 @@
+export const flywheelSteps = [
+  "YOUNG BUILDERS",
+  "BUILD",
+  "COMPANIES",
+  "OUTCOMES",
+  "FOUNDERS RETURN",
+  "MENTORS / OPERATORS / ANGELS",
+  "MORE RESOURCES",
+  "BETTER FOUNDERS",
+  "MORE COMPANIES",
+];
