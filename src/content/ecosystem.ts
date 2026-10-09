@@ -65,12 +65,17 @@ export const portfolio: PortfolioCompany[] = [
 ];
 
 export const organisations: Organisation[] = [
-  { name: "Notion", kind: "Technology partner", logo: "https://cdn.simpleicons.org/notion/0e0e0c", url: "https://notion.so", verified: true, source: "Brand logo" },
-  { name: "Figma", kind: "Technology partner", logo: "https://cdn.simpleicons.org/figma/0e0e0c", url: "https://figma.com", verified: true, source: "Brand logo" },
-  { name: "Vercel", kind: "Technology partner", logo: "https://cdn.simpleicons.org/vercel/0e0e0c", url: "https://vercel.com", verified: true, source: "Brand logo" },
-  { name: "Slack", kind: "Technology partner", logo: "https://cdn.simpleicons.org/slack/0e0e0c", url: "https://slack.com", verified: true, source: "Brand logo" },
-  { name: "Stripe", kind: "Technology partner", logo: "https://cdn.simpleicons.org/stripe/0e0e0c", url: "https://stripe.com", verified: true, source: "Brand logo" },
-  { name: "GitHub", kind: "Technology partner", logo: "https://cdn.simpleicons.org/github/0e0e0c", url: "https://github.com", verified: true, source: "Brand logo" },
+  { name: "AWS", kind: "Technology partner", logo: "/images/technology-support/technology-01.png", url: "https://aws.amazon.com", verified: true, source: "Provided logo" },
+  { name: "Amazon", kind: "Technology partner", logo: "/images/technology-support/technology-02.png", url: "https://www.amazon.com", verified: true, source: "Provided logo" },
+  { name: "Google Cloud", kind: "Technology partner", logo: "/images/technology-support/technology-03.png", url: "https://cloud.google.com", verified: true, source: "Provided logo" },
+  { name: "ElevenLabs", kind: "Technology partner", logo: "/images/technology-support/technology-04.png", url: "https://elevenlabs.io", verified: true, source: "Provided logo" },
+  { name: "Sarvam", kind: "Technology partner", logo: "/images/technology-support/technology-05.png", url: "https://www.sarvam.ai", verified: true, source: "Provided logo" },
+  { name: "n8n", kind: "Technology partner", logo: "/images/technology-support/technology-06.png", url: "https://n8n.io", verified: true, source: "Provided logo" },
+  { name: "Keka", kind: "Technology partner", logo: "/images/technology-support/technology-07.png", verified: true, source: "Provided logo" },
+  { name: "HubSpot", kind: "Technology partner", logo: "/images/technology-support/technology-08.png", url: "https://www.hubspot.com", verified: true, source: "Provided logo" },
+  { name: "Technology partner", kind: "Technology partner", logo: "/images/technology-support/technology-09.png", verified: true, source: "Provided logo" },
+  { name: "Notion", kind: "Technology partner", logo: "/images/technology-support/technology-10.png", url: "https://notion.so", verified: true, source: "Provided logo" },
+  { name: "GitHub", kind: "Technology partner", logo: "/images/technology-support/technology-11.png", url: "https://github.com", verified: true, source: "Provided logo" },
   { name: "Peak XV", kind: "Investor network", logo: "https://cdn.simpleicons.org/google/0e0e0c", verified: true, source: "Illustrative wordmark" },
   { name: "Lightspeed", kind: "Investor network", logo: "https://cdn.simpleicons.org/microsoft/0e0e0c", verified: true, source: "Illustrative wordmark" },
   { name: "Accel", kind: "Investor network", logo: "https://cdn.simpleicons.org/amazon/0e0e0c", verified: true, source: "Illustrative wordmark" },
