@@ -64,6 +64,9 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <a href="/partner" className="btn-lime hidden whitespace-nowrap !py-2.5 lg:inline-flex">
+            Partner with us <ArrowUpRight size={14} aria-hidden />
+          </a>
           <a href="#apply" onClick={(e) => (e.preventDefault(), nav("#apply"))} className="btn-lime hidden whitespace-nowrap !py-2.5 sm:inline-flex">
             Start a conversation <ArrowUpRight size={14} aria-hidden />
           </a>
@@ -103,9 +106,14 @@ export function Header() {
                 ))}
               </ul>
             </nav>
-            <a href="#apply" onClick={(e) => (e.preventDefault(), nav("#apply"))} className="btn-lime w-full">
-              Start a conversation <ArrowUpRight size={14} aria-hidden />
-            </a>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <a href="/partner" onClick={() => setOpen(false)} className="btn-lime w-full">
+                Partner with us <ArrowUpRight size={14} aria-hidden />
+              </a>
+              <a href="#apply" onClick={(e) => (e.preventDefault(), nav("#apply"))} className="btn-ghost w-full">
+                Start a conversation <ArrowUpRight size={14} aria-hidden />
+              </a>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
