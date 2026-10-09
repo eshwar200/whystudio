@@ -26,9 +26,9 @@ export function LogoMarquee({ label, kind, tone = "paper" }: Props) {
       <div className="marquee-host mt-6 overflow-hidden">
         <div className="marquee flex w-max items-center gap-12" style={{ "--marquee-duration": "34s" } as CSSProperties}>
           {repeated.map((organisation, index) => (
-            <div key={`${organisation.name}-${index}`} className="flex h-12 min-w-[9rem] items-center justify-center border border-ink/10 bg-paper px-6">
+            <div key={`${organisation.name}-${index}`} className="flex h-16 min-w-[12rem] items-center justify-center border border-ink/10 bg-paper px-6">
               {organisation.logo ? (
-                <Image unoptimized src={organisation.logo} alt={organisation.name} width={160} height={56} className="h-9 w-auto object-contain opacity-100 [filter:none]" />
+                <Image unoptimized src={organisation.logo} alt={organisation.name} width={220} height={76} className="h-12 w-auto object-contain opacity-100 [filter:none]" />
               ) : (
                 <span className="display text-lg">{organisation.name}</span>
               )}

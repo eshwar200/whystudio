@@ -21,22 +21,26 @@ const stock = {
 } as const;
 
 export const ecosystemMetrics: Metric[] = [
-  { label: "Founders worked with", value: 120, suffix: "+", verified: true, source: "Illustrative studio metric" },
-  { label: "Startups in the studio", value: 24, verified: true, source: "Illustrative studio metric" },
+  { label: "Founders worked with", value: 175, suffix: "+", verified: true, source: "Provided studio metric" },
+  { label: "Startups in the studio", value: 10, suffix: "+", verified: true, source: "Provided studio metric" },
   { label: "Sessions and workshops run", value: 80, suffix: "+", verified: true, source: "Illustrative studio metric" },
   { label: "Campuses reached", value: 18, verified: true, source: "Illustrative studio metric" },
 ];
 
 export const ecosystemPhoto: GalleryImage = {
-  src: "",
-  alt: "",
+  src: "/images/ecosystem/ecosystem-01.jpg",
+  alt: "Founders collaborating",
   caption: "",
   category: "Founder session",
-  verified: false,
-  source: "Awaiting replacement image",
+  verified: true,
+  source: "Provided ecosystem image",
 };
 
-export const ecosystemPhotos: GalleryImage[] = [];
+export const ecosystemPhotos: GalleryImage[] = [
+  ecosystemPhoto,
+  { src: "/images/ecosystem/ecosystem-02.jpg", alt: "Founder community gathering", caption: "", category: "Community event", verified: true, source: "Provided ecosystem image" },
+  { src: "/images/ecosystem/ecosystem-03.jpg", alt: "Builders working together", caption: "", category: "Workshop", verified: true, source: "Provided ecosystem image" },
+];
 
 export const ecosystemMission =
   "Ambition is everywhere. Infrastructure isn't. WHY exists to close that gap for India's youngest builders.";
