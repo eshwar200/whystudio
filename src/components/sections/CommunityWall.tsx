@@ -23,7 +23,7 @@ function Row({ items, reverse, duration, big }: { items: WallItem[]; reverse?: b
         {loop.map((it, i) => (
           <span key={i} className="flex shrink-0 items-center gap-4">
             {it.logo && it.verified ? (
-              <Image src={it.logo} alt="" width={120} height={40} className="h-8 w-auto opacity-80 grayscale" />
+              <Image src={it.logo} alt="" width={120} height={40} className="h-8 w-auto" />
             ) : (
               <span className={cn(big ? "display text-[clamp(2rem,5vw,4.5rem)] leading-none" : "text-2xl", !it.verified && "text-ink/25")}>{it.label}</span>
             )}

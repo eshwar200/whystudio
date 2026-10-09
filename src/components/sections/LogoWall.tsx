@@ -38,7 +38,7 @@ export function LogoWall({ id, index, sectionLabel, headline, label, kind, tone 
             <li key={`${o.name}-${i}`} className={`group relative grid aspect-[3/2] place-items-center border-b border-r p-6 ${dark ? "border-paper/15" : "border-ink/15"}`}>
               {o.verified ? (
                 o.logo ? (
-                  <Image unoptimized src={o.logo} alt={o.name} width={160} height={64} className="h-10 w-auto object-contain opacity-70 grayscale transition duration-500 group-hover:opacity-100 group-hover:grayscale-0" />
+                  <Image unoptimized src={o.logo} alt={o.name} width={160} height={64} className="h-10 w-auto object-contain transition duration-500 group-hover:scale-[1.02]" />
                 ) : (
                   <span className="display text-center text-lg">{o.name}</span>
                 )

@@ -28,7 +28,7 @@ export function LogoMarquee({ label, kind, tone = "paper" }: Props) {
           {repeated.map((organisation, index) => (
             <div key={`${organisation.name}-${index}`} className="flex h-12 min-w-[9rem] items-center justify-center border border-ink/10 bg-paper px-6">
               {organisation.logo ? (
-                <Image unoptimized src={organisation.logo} alt={organisation.name} width={120} height={40} className="h-7 w-auto object-contain opacity-65 grayscale" />
+                <Image unoptimized src={organisation.logo} alt={organisation.name} width={120} height={40} className="h-7 w-auto object-contain" />
               ) : (
                 <span className="display text-lg">{organisation.name}</span>
               )}
