@@ -83,12 +83,16 @@ export const organisations: Organisation[] = [
   { name: "Blume", kind: "Investor network", logo: "https://cdn.simpleicons.org/meta/0e0e0c", verified: true, source: "Illustrative wordmark" },
   { name: "Matrix", kind: "Investor network", logo: "https://cdn.simpleicons.org/apple/0e0e0c", verified: true, source: "Illustrative wordmark" },
   { name: "100X", kind: "Investor network", logo: "https://cdn.simpleicons.org/adobe/0e0e0c", verified: true, source: "Illustrative wordmark" },
-  { name: "IIT Bombay", kind: "University", logo: "https://cdn.simpleicons.org/academia/0e0e0c", verified: true, source: "Illustrative campus network" },
-  { name: "IIT Delhi", kind: "University", logo: "https://cdn.simpleicons.org/academia/0e0e0c", verified: true, source: "Illustrative campus network" },
-  { name: "BITS Pilani", kind: "University", logo: "https://cdn.simpleicons.org/academia/0e0e0c", verified: true, source: "Illustrative campus network" },
-  { name: "IIM Bangalore", kind: "University", logo: "https://cdn.simpleicons.org/academia/0e0e0c", verified: true, source: "Illustrative campus network" },
-  { name: "VIT", kind: "University", logo: "https://cdn.simpleicons.org/academia/0e0e0c", verified: true, source: "Illustrative campus network" },
-  { name: "Ashoka University", kind: "University", logo: "https://cdn.simpleicons.org/academia/0e0e0c", verified: true, source: "Illustrative campus network" },
+  { name: "Indian Institute of Technology Madras", kind: "University", logo: "/images/universities/university-01.png", verified: true, source: "Provided logo" },
+  { name: "Sri Sri Institute of Science and Technology", kind: "University", logo: "/images/universities/university-02.png", verified: true, source: "Provided logo" },
+  { name: "Indian Institute of Technology Bombay", kind: "University", logo: "/images/universities/university-03.png", verified: true, source: "Provided logo" },
+  { name: "Provided university partner", kind: "University", logo: "/images/universities/university-04.png", verified: true, source: "Provided logo" },
+  { name: "Jawaharlal Nehru Technological University Hyderabad", kind: "University", logo: "/images/universities/university-05.png", verified: true, source: "Provided logo" },
+  { name: "Provided institutional partner", kind: "University", logo: "/images/universities/university-06.png", verified: true, source: "Provided logo" },
+  { name: "Vellore Institute of Technology", kind: "University", logo: "/images/universities/university-07.png", verified: true, source: "Provided logo" },
+  { name: "Vishnu Universal Learning", kind: "University", logo: "/images/universities/university-08.png", verified: true, source: "Provided logo" },
+  { name: "Indian Institute of Technology Hyderabad", kind: "University", logo: "/images/universities/university-09.png", verified: true, source: "Provided logo" },
+  { name: "Tech Mahindra", kind: "University", logo: "/images/universities/university-10.png", verified: true, source: "Provided logo" },
 ];
 
 export const gallery: GalleryImage[] = stock.work.map((src, i) => ({
