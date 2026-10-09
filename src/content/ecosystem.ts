@@ -28,21 +28,15 @@ export const ecosystemMetrics: Metric[] = [
 ];
 
 export const ecosystemPhoto: GalleryImage = {
-  src: "/images/ecosystem/ecosystem-01.jpg",
-  alt: "Founders collaborating",
+  src: "",
+  alt: "",
   caption: "",
   category: "Founder session",
-  verified: true,
-  source: "Provided ecosystem image",
+  verified: false,
+  source: "Awaiting replacement image",
 };
 
-export const ecosystemPhotos: GalleryImage[] = [
-  ecosystemPhoto,
-  { src: "/images/ecosystem/ecosystem-02.jpg", alt: "Founder community gathering", caption: "", category: "Community event", verified: true, source: "Provided ecosystem image" },
-  { src: "/images/ecosystem/ecosystem-03.jpg", alt: "Builders working together", caption: "", category: "Workshop", verified: true, source: "Provided ecosystem image" },
-  { src: "/images/ecosystem/ecosystem-04.jpg", alt: "Startup ecosystem event", caption: "", category: "Startup showcase", verified: true, source: "Provided ecosystem image" },
-  { src: "/images/ecosystem/ecosystem-05.jpg", alt: "Young builders in the ecosystem", caption: "", category: "Mentor meeting", verified: true, source: "Provided ecosystem image" },
-];
+export const ecosystemPhotos: GalleryImage[] = [];
 
 export const ecosystemMission =
   "Ambition is everywhere. Infrastructure isn't. WHY exists to close that gap for India's youngest builders.";
