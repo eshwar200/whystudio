@@ -22,7 +22,7 @@ export default function PartnerPage() {
   return (
     <div className="on-ink min-h-screen bg-ink text-paper">
       <Header />
-      <main id="main" className="frame pt-32">
+      <main id="main" className="frame pt-36">
         <section className="pb-20 md:pb-28">
           <p className="kicker text-volt">Partner</p>
           <div className="mt-6 grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">

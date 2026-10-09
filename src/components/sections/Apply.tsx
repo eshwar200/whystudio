@@ -95,7 +95,7 @@ export function Apply() {
       <div className="relative grid gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-5">
           <RevealLines lines={["Building", "something that", "matters?"]} className="display text-huge" />
-          <p className="mt-8 max-w-md text-lg leading-relaxed text-ink/80">
+          <p className="mt-8 max-w-md text-lg leading-relaxed text-ink/60">
             No decks required. No warm intro required. Tell us what you&apos;re building and why now — the conversation starts there.
           </p>
           <ul className="mt-14 space-y-5">
@@ -123,9 +123,9 @@ export function Apply() {
                   <p className="display text-huge">
                     You&apos;re in the <span className="text-lime">system.</span>
                   </p>
-                  <p className="mt-6 max-w-md text-lg text-paper/85">We&apos;ll review what you&apos;re building and get back to you.</p>
+                  <p className="mt-6 max-w-md text-lg text-paper/70">We&apos;ll review what you&apos;re building and get back to you.</p>
                 </div>
-                <span className="kicker text-paper/75">{values.company}</span>
+                <span className="kicker text-paper/40">{values.company}</span>
               </motion.div>
             ) : (
               <motion.form key="form" onSubmit={onSubmit} noValidate className="grid gap-x-8 gap-y-8 sm:grid-cols-2" exit={{ opacity: 0 }}>
@@ -170,7 +170,7 @@ export function Apply() {
                 })}
 
                 <div className="flex flex-col gap-4 sm:col-span-2 sm:flex-row sm:items-center sm:justify-between">
-                  <p className="text-sm text-ink/75" aria-live="polite">
+                  <p className="text-sm text-ink/50" aria-live="polite">
                     {status === "error" ? (
                       <span className="text-flare">
                         {serverMsg}

@@ -35,7 +35,7 @@ export function Vision() {
         </h2>
         <Reveal className="mt-14 grid gap-10 md:grid-cols-12">
           <p className="display text-big text-lime md:col-span-8">We&apos;re building the infrastructure for India&apos;s next generation of founders.</p>
-          <p className="kicker leading-loose text-paper/75 md:col-span-3 md:col-start-10 md:self-end">
+          <p className="kicker leading-loose text-paper/40 md:col-span-3 md:col-start-10 md:self-end">
             Why now?
             <br />
             Why not you?

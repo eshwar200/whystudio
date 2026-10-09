@@ -43,14 +43,14 @@ export function Header() {
         scrolled ? "border-b border-ink/10 bg-paper/95 backdrop-blur-md" : "border-b border-transparent",
       )}
     >
-      <div className="frame flex h-16 items-center justify-between gap-6">
+      <div className="frame flex h-20 items-center justify-between gap-6">
         <a href={onHome ? "#top" : "/"} onClick={(e) => {
           if (onHome) {
             e.preventDefault();
             nav("#top");
           }
         }} className="group flex items-baseline gap-2" aria-label="WHY Venture Studio, back to top">
-          <Image src="/why-logo.png" alt="WHY Venture Studio" width={92} height={66} className="h-9 w-24 object-contain object-left" priority />
+          <Image src="/why-logo.png" alt="WHY Venture Studio" width={144} height={96} className="h-14 w-36 object-contain object-left" priority />
           <span className="kicker hidden whitespace-nowrap text-ink/75 transition-opacity group-hover:text-ink sm:inline lg:hidden min-[1400px]:inline">Venture Studio</span>
         </a>
 
@@ -106,7 +106,7 @@ export function Header() {
         {open && (
           <motion.div
             id="mobile-menu"
-            className="on-ink fixed inset-0 top-16 z-40 flex flex-col justify-between bg-ink px-[var(--gutter)] pb-10 pt-8 text-paper lg:hidden"
+            className="on-ink fixed inset-0 top-20 z-40 flex flex-col justify-between bg-ink px-[var(--gutter)] pb-10 pt-8 text-paper lg:hidden"
             initial={{ clipPath: "inset(0 0 100% 0)" }}
             animate={{ clipPath: "inset(0 0 0% 0)" }}
             exit={{ clipPath: "inset(0 0 100% 0)" }}

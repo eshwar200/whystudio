@@ -90,7 +90,7 @@ export function Hero() {
     <section
       id="top"
       aria-label="What are you building?"
-      className="relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-paper pt-16"
+      className="relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-paper pt-20"
       onPointerMove={(e) => {
         const r = e.currentTarget.getBoundingClientRect();
         mx.set(e.clientX - r.left);

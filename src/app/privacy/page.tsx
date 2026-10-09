@@ -8,7 +8,7 @@ export default function PrivacyPage() {
   return (
     <div className="bg-paper text-ink">
       <Header />
-      <main id="main" className="min-h-screen px-6 pb-24 pt-32 md:px-12">
+      <main id="main" className="min-h-screen px-6 pb-24 pt-36 md:px-12">
         <article className="mx-auto max-w-3xl">
         <p className="kicker text-volt">WHY Venture Studio</p>
         <h1 className="display mt-6 text-6xl md:text-8xl">Privacy policy</h1>
