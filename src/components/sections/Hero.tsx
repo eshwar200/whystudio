@@ -173,8 +173,8 @@ export function Hero() {
         </div>
 
         <div className="mt-10 grid gap-8 md:mt-14 lg:grid-cols-12">
-          <p className="max-w-sm text-lg leading-snug text-ink/70 lg:col-span-4">
-            Tell WHY what you&apos;re building. We&apos;ll show you which part of the studio is built for exactly where you are.
+          <p className="max-w-sm text-lg leading-snug text-ink/80 lg:col-span-4">
+            Ambition is everywhere. Access to the right infrastructure is not. Tell us what you&apos;re building and we&apos;ll point you towards the support that may help you make progress.
           </p>
 
           {/* The console */}

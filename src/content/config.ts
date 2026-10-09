@@ -13,9 +13,9 @@ export const SHOW_PLACEHOLDER_SLOTS = false;
 export const site = {
   name: "WHY Venture Studio",
   shortName: "WHY",
-  url: "http://localhost:3000",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   description:
-    "WHY Venture Studio finds ambitious young builders early and gives them the leverage, infrastructure, network, technology, knowledge, talent and capital access required to build meaningful companies.",
+    "WHY Venture Studio helps ambitious young builders access the infrastructure, expertise and networks required to move from an early idea towards a meaningful company.",
   location: "India",
   email: "",
   phone: "7780754541",
