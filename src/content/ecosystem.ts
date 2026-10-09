@@ -39,7 +39,7 @@ export const ecosystemPhoto: GalleryImage = {
 export const ecosystemPhotos: GalleryImage[] = [
   ecosystemPhoto,
   { src: "/images/ecosystem/ecosystem-02.jpg", alt: "Founder community gathering", caption: "", category: "Community event", verified: true, source: "Provided ecosystem image" },
-  { src: "/images/ecosystem/ecosystem-03.jpg", alt: "Builders working together", caption: "", category: "Workshop", verified: true, source: "Provided ecosystem image" },
+  { src: "/images/ecosystem/ecosystem-03.jpg", alt: "Builders in the WHY ecosystem", caption: "", category: "Founder session", verified: true, source: "Provided ecosystem image" },
 ];
 
 export const ecosystemMission =
