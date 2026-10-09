@@ -55,10 +55,13 @@ export const people: Person[] = [
 ];
 
 export const mentors: Person[] = [
-  { name: "Nisha Arora", role: "Product & growth", company: "Independent operator", group: "Mentor", expertise: ["Product", "Growth"], photo: stock.founders[1], verified: true, source: "Unsplash stock portrait" },
-  { name: "Rohan Das", role: "Engineering", company: "Technology leader", group: "Mentor", expertise: ["Systems", "Hiring"], photo: stock.founders[2], verified: true, source: "Unsplash stock portrait" },
-  { name: "Priya Menon", role: "Brand & community", company: "Creative operator", group: "Mentor", expertise: ["Brand", "Community"], photo: stock.founders[3], verified: true, source: "Unsplash stock portrait" },
-  { name: "Arjun Sethi", role: "Capital strategy", company: "Early-stage investor", group: "Mentor", expertise: ["Capital", "Finance"], photo: stock.founders[4], verified: true, source: "Unsplash stock portrait" },
+  { name: "Hari Pavan", role: "HR Domain Expert", company: "", group: "Mentor", expertise: ["People", "Hiring"], photo: "/images/mentors/mentor-01.png", verified: true, source: "Provided mentor profile" },
+  { name: "Yug Mallik", role: "Enterprise AI Advisor", company: "", group: "Mentor", expertise: ["AI", "Enterprise"], photo: "/images/mentors/mentor-02.jpg", verified: true, source: "Provided mentor profile" },
+  { name: "Kiran Babu", role: "Govt AI Policy Advisor", company: "", group: "Mentor", expertise: ["AI policy", "Government"], photo: "/images/mentors/mentor-03.jpg", verified: true, source: "Provided mentor profile" },
+  { name: "Abhijeet Navandar", role: "Partner · CS Coworking Spaces", company: "", group: "Mentor", expertise: ["Community", "Workspaces"], photo: "/images/mentors/mentor-04.jpg", verified: true, source: "Provided mentor profile" },
+  { name: "Meghana", role: "Global Entrepreneurship Educator", company: "", group: "Mentor", expertise: ["Education", "Entrepreneurship"], photo: "/images/mentors/mentor-05.jpg", verified: true, source: "Provided mentor profile" },
+  { name: "Prasad Anumula", role: "Enterprise Risk Management", company: "", group: "Mentor", expertise: ["Risk", "Enterprise"], photo: "/images/mentors/mentor-06.jpg", verified: true, source: "Provided mentor profile" },
+  { name: "Vamshi", role: "Energy Specialist · Deloitte", company: "", group: "Mentor", expertise: ["Energy", "Operations"], photo: "/images/mentors/mentor-07.png", verified: true, source: "Provided mentor profile" },
 ];
 
 export const portfolio: PortfolioCompany[] = [

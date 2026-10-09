@@ -41,9 +41,8 @@ export function Mentors() {
               </span>
             </div>
             <div className="px-2 pb-2 pt-4 text-center">
-              <p className="display text-xl leading-none">{mentor.name}</p>
-              <p className="mt-3 text-sm text-ink/65">{mentor.role}</p>
-              <p className="kicker mt-2 text-ink/50">{mentor.company}</p>
+              <p className="text-xl font-semibold leading-tight text-ink">{mentor.name}</p>
+              <p className="mt-2 text-sm font-medium leading-snug text-ink/70">{mentor.role}</p>
             </div>
           </li>
         ))}
